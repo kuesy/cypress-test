@@ -1,0 +1,15 @@
+{
+  "name": "cypress-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "cy:local": "cypress open",
+    "cy:run": "cypress run"
+  },
+  "repository": "https://github.com/kuesy/cypress-test.git",
+  "author": "kuesy <kuesy0816@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cypress": "^4.1.0"
+  }
+}
