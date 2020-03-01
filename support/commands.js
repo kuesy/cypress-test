@@ -23,3 +23,15 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+/**
+ * yahoo login and move ytop
+ */
+Cypress.Commands.add('yLogin', (yid, pwd) => {
+    cy.visit("https://login.yahoo.co.jp/config/login")
+    cy.get('#username').type(yid)
+    cy.get('#btnNext').contains('次へ').click()
+    cy.wait(3000)
+    cy.get('#passwd').type(pwd)
+    cy.get('#btnSubmit').contains('ログイン').click()
+})
